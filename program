@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int myfcn(int, int&,int*);
+int main(void)
+{
+  /* Variable Declaration
+   Here we declare variables with input
+   a = 1
+   b = 2
+   c = 3
+   d[0] = 4 and 
+   d[1] = 5
+  */
+  int a=1,b=2,c=3,d[2] = {4,5};
+  
+  // Here we just pass a,b and array d to myfcn() and store value in c
+  c = myfcn(a,b,d);
+  // Her c = 13, returned value from function
+  
+  
+  // a value doesnt change
+  // b changes from 2 to 14
+  // c changes from 3 to 13
+  // d[0] is same as declared above that's 4 and
+  // d[1] changes from 5 to 15
+  cout << a << " " << b << " " << c << " " << d[0] << " " << d[1] << endl;
+  
+    return 0;
+}
+
